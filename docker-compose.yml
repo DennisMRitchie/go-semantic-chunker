@@ -1,0 +1,10 @@
+version: '3.8'
+services:
+  semantic-chunker:
+    build: .
+    ports:
+      - "8083:8083"
+    environment:
+      - PORT=8083
+      - GIN_MODE=release
+    restart: unless-stopped
